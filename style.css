@@ -1,0 +1,306 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap');
+
+:root{
+    --Moderate-violet: hsl(263, 55%, 52%);
+    --Very-dark-grayish-blue: hsl(217, 19%, 35%);
+    --Very-dark-blackish-blue: hsl(219, 29%, 14%);
+    --White: hsl(0, 0%, 100%);
+
+    --Light-gray: hsl(0, 0%, 81%);
+    --Light-grayish-blue: hsl(210, 46%, 95%);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: grid;
+    place-items: center;
+    font-size: 13px;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    background-color: var(--Light-grayish-blue);
+}
+
+.grid-container{
+    margin: 8rem auto;
+    width: min(100%, 70rem);
+    display: grid;
+    grid-template-areas: 
+      'Daniel Daniel Jonathan Kira'
+      'Jeanette Patrick Patrick Kira';
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+   
+}
+
+.daniel-section{
+     grid-area: Daniel;
+    background-color: var(--Moderate-violet);
+    border-radius: 0.6rem;
+    padding: 1.4rem;
+    background-image: url(images/bg-pattern-quotation.svg);
+    background-repeat: no-repeat;
+    background-position: top right 17%;
+}
+
+.jonathan-section{
+    grid-area: Jonathan; 
+    background-color: var(--Very-dark-grayish-blue);
+    border-radius: 0.6rem;
+    padding: 1.4rem;
+}
+
+.jeanette-section{
+     grid-area: Jeanette;
+    background-color: var(--White);
+    border-radius: 0.6rem;
+    padding: 1.4rem;
+    box-shadow: 0.3rem 0.5rem 0.7rem rgba(29, 28, 28, 0.103);
+}
+
+.patrick-section{
+    grid-area: Patrick; 
+    background-color: var(--Very-dark-blackish-blue); 
+    border-radius: 0.6rem;
+    padding: 1.4rem;
+}
+
+.kira-section{
+     grid-area: Kira; 
+    background-color: var(--White);
+    border-radius: 0.6rem;
+    padding: 1.4rem;
+    box-shadow: 0.3rem 0.5rem 0.7rem rgba(29, 28, 28, 0.103);
+}
+.jeanette-section > .top-review, 
+.kira-section > .top-review {
+    color: var(--Very-dark-grayish-blue);
+    font-weight: 600;
+}
+
+.jeanette-section .review, 
+.kira-section .review {
+   color: var(--Very-dark-grayish-blue);
+   opacity: 0.7;
+}
+
+.jeanette-section .profile > strong, 
+.kira-section  .profile > strong {
+    color: var(--Very-dark-blackish-blue);
+}
+
+.jeanette-section .profile span, 
+.kira-section .profile span {
+    color: var(--Very-dark-blackish-blue);
+}
+
+.kira-section .profile{
+    margin-bottom: 0;
+}
+
+.kira-section > .top-review{
+    background-color: var(--White);
+    border-radius: 0.6rem;
+    padding: 1.4rem;
+    margin-bottom: 0;
+    margin-left: -1.1rem;
+    width: 13.8rem;
+}
+
+.daniel-section .top-review{
+    width: 32rem;
+}
+
+.jonathan-section .top-review{
+    width: 12.7rem;
+}
+
+.jeanette-section .top-review{
+    width: 12rem;
+}
+
+.daniel-section .review{
+    width: 30rem;
+}
+
+.jonathan-section .review{
+    width: 12rem;
+}
+
+.patrick-section .review{
+    width: 29rem;
+}
+
+.jeanette-section .review{
+    width: 13rem;
+}
+
+.kira-section .review{
+    width: 12rem;
+}
+
+.profile{
+    margin-bottom: 1rem;
+}
+
+.profile span{
+    display: block;
+    color: var(--White);
+    opacity: 0.5;
+    font-weight: 500;
+}
+
+.profile img{
+    width: 1.8rem;
+    height: auto;
+    border-radius: 50%;
+    border: 0.1rem solid var(--White);
+    display: block;
+    float: left;
+    margin-right: 0.9rem;
+}
+
+.profile strong{
+    color: var(--White);
+    font-weight: 500;
+}
+
+.top-review{
+    color: var(--White);
+    font-size: 1.35rem;
+    font-weight: 500;
+    margin-bottom: 1.1rem;
+}
+
+.review{
+    color: var(--White);
+    opacity: 0.7;
+    line-height: 1.25;
+    font-weight: 500;
+}
+
+.attribution { 
+     font-size: 1rem; 
+     text-align: center;
+}
+
+.attribution a {
+     color: hsl(228, 45%, 44%); }
+
+
+     @media (max-width: 576px){
+        body {
+            font-size: 12px;
+            overflow-x: hidden;
+          }
+
+          main{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-left: 1.5rem;
+          }
+        
+          .grid-container {
+            margin: 5rem 0 0;
+            grid-template-columns: 1fr;
+            grid-template-areas:
+              'Daniel'
+              'Jonathan'
+              'Jeanette'
+              'Patrick'
+              'Kira';
+              gap: 2rem;
+          }
+        
+          .daniel-section,
+          .jonathan-section,
+          .jeanette-section,
+          .patrick-section,
+          .kira-section {
+            width: 93%;
+          }
+   
+          .daniel-section .review{
+            width: 17rem;
+          }
+        
+          .jonathan-section .review{
+            width: 18rem;
+          }
+
+          .patrick-section .review{
+            width: 17.8rem;
+          }
+
+          .kira-section .review{
+            width: 17rem;
+          }
+          .top-review {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            width: 10rem;
+          }
+        
+          .daniel-section .top-review {
+           width: 15.5rem;
+          }
+
+          .jonathan-section .top-review{
+            width: 17rem;
+          }
+
+          .jeanette-section .top-review{
+            width: 16rem;
+          }
+
+          .patrick-section .top-review{
+            width: 15.5rem;
+          }
+
+          .kira-section .top-review{
+            width: 19rem;
+          }
+          .review {
+            font-size: 0.9rem;
+          }
+        
+          .profile img {
+            width: 1.6rem;
+            margin-right: 0.8rem;
+          }
+        
+          .attribution {
+            font-size: 0.9rem;
+            margin-top: 2rem;
+            margin-right: 1rem;
+            text-align: center;
+          }
+
+        }
+     
+        @media (min-width: 768px) and (max-width: 1300px) {
+            .grid-container p{
+                font-size: 0.8rem;
+            }
+
+            .grid-container {
+             width: min(95%);
+            }
+
+            .daniel-section .review, 
+            .daniel-section .top-review{
+              width: 15rem;
+            }
+
+            .patrick-section .review{
+              width: 14rem;
+            }
+
+            .attribution{
+              margin-top: 0;
+            }
+        }
