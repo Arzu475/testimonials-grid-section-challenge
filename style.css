@@ -25,7 +25,7 @@ body{
 }
 
 .grid-container{
-    margin: 8rem auto;
+    margin: 10rem auto;
     width: min(100%, 70rem);
     display: grid;
     grid-template-areas: 
