@@ -37,7 +37,7 @@ body{
 }
 
 .daniel-section{
-     grid-area: Daniel;
+    grid-area: Daniel;
     background-color: var(--Moderate-violet);
     border-radius: 0.6rem;
     padding: 1.4rem;
